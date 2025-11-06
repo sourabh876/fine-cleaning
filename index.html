@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fine Cleaning</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <header>
+    <nav>
+      <section>
+        <p><img class="logo" src="logo.png" alt="logo"></p>
+      </section>
+      <section>
+        <ul>
+          <a href="">Home</a><a href="">Services</a><a href="">About us</a><a href="">Contact us</a>
+        </ul>
+      </section>
+
+      <section> <button id="username">
+        <p>Sourabh</p> 
+        <select id="select">
+          <option>Switch account</option>
+          <option>Log Out</option>
+        </select>
+      </button>
+        
+      </section>
+
+    </nav>
+  </header>
+
+  <main>
+    <div class="left">
+      <section>
+        <h1 class="h1">Want to Increase Life Spam Of</h1>
+        <h1 class="h1">Your Clothes! Choose</h1>
+        <h1 class="blue">Fine Laundry</h1>
+
+        <p>From Premium dry cleaning to swift wash and fold, we deliver care and convenience. Schedule a pickup and give
+          a new life to your clothes.</p>
+        <br>
+        <button id="Appointment">Book an Appointment</button>
+      </section>
+    </div>
+    <div class="right">
+      <img class="laundryimg" src="laundry.jpeg" alt="laundry img">
+    </div>
+  </main>
+
+  <section class="service">
+    <div class="service-header">
+      <div>
+        <h1>Our Achievements</h1>
+      </div>
+
+      <nav>
+        <h2>15+<p>Laundary Services</p>
+        </h2>
+        <h2>240+<p>Happy Customers</p>
+        </h2>
+        <h2>2+ Yrs<p>Experience</p>
+        </h2>
+      </nav>
+
+    </div>
+    <div class="service-content">
+      <div class="service-left">
+        <div class="service-left-header">
+          <h1>Our Services</h1>
+          <p>Click on Add Item button to add services to your cart.</p>
+        </div>
+        <hr>
+        <div class="service-info">
+          <div class="services">
+            <div >
+              <span class="name"><ion-icon name="shirt-outline"></ion-icon>Dry Cleaning</span>
+              <span class="price" data-price="200">&#8377; 200</span>
+            </div>
+            <button onclick="togglebuttons(this)" class="add-item">Add item <ion-icon
+                name="add-circle-outline"></ion-icon></button>
+            <button class="remove-item" onclick="togglebuttons(this)"><p>Remove item</p> <ion-icon
+                name="remove-circle-outline"></ion-icon></button>
+          </div>
+          <div class="services">
+            <div >
+              <span class="name"><ion-icon name="water-outline"></ion-icon>Washing & Fold</span>
+              <span class="price" data-price="100">&#8377; 100</span>
+            </div>
+            <button class="add-item" onclick="togglebuttons(this)">Add item <ion-icon
+                name="add-circle-outline"></ion-icon></button>
+            <button class="remove-item" onclick="togglebuttons(this)"><p>Remove item</p> <ion-icon
+                name="remove-circle-outline"></ion-icon></button>
+          </div>
+          <div class="services">
+            <div >
+              <span class="name"><ion-icon name="shirt-outline"></ion-icon>Ironing</span>
+              <span class="price" data-price="30">&#8377; 30</span>
+            </div>
+            <button class="add-item" onclick="togglebuttons(this)">Add item <ion-icon
+                name="add-circle-outline"></ion-icon></button>
+            <button class="remove-item" onclick="togglebuttons(this)"><p>Remove item</p> <ion-icon
+                name="remove-circle-outline"></ion-icon></button>
+          </div>
+          <div class="services">
+            <div >
+              <span class="name"><ion-icon name="sparkles-outline"></ion-icon>Stain Removal</span>
+              <span class="price" data-price="500">&#8377; 500</span>
+            </div>
+            <button class="add-item" onclick="togglebuttons(this)">Add item <ion-icon
+                name="add-circle-outline"></ion-icon></button>
+            <button class="remove-item" onclick="togglebuttons(this)"><p>Remove item</p> <ion-icon
+                name="remove-circle-outline"></ion-icon></button>
+          </div>
+          <div class="services">
+            <div >
+              <span class="name"><ion-icon name="layers-outline"></ion-icon>Leather & Suede Clng.</span>
+              <span class="price" data-price="999">&#8377; 999</span>
+            </div>
+            <button class="add-item" onclick="togglebuttons(this)">Add item <ion-icon
+                name="add-circle-outline"></ion-icon></button>
+            <button class="remove-item" onclick="togglebuttons(this)"><p>Remove item</p><ion-icon
+                name="remove-circle-outline"></ion-icon></button>
+          </div>
+          <div class="services">
+            <div >
+              <span class="name"><ion-icon name="body-outline"></ion-icon>Wedding Dress Clng.</span>
+              <span class="price" data-price="3000">&#8377; 3000</span>
+            </div>
+            <button class="add-item" onclick="togglebuttons(this)">Add item <ion-icon
+                name="add-circle-outline"></ion-icon></button>
+            <button class="remove-item" onclick="togglebuttons(this)"><p>Remove item</p><ion-icon
+                name="remove-circle-outline"></ion-icon></button>
+          </div>
+        </div>
+        <hr>
+        <span class="infosvg"><ion-icon name="information-circle-outline"></ion-icon>Add the items to the cart and Book
+          now</span>
+      </div>
+      <div class="service-right">
+        <div class="upper-right">
+          <div class="cart">
+            <h2>Added Items</h2>
+            <hr>
+
+            <ul id="cart-list">
+              <li id="empty-msg">
+                <ion-icon name="information-circle-outline"></ion-icon>
+                <h2>No Items Added</h2>
+                <small>Add items to the cart from the services bar</small>
+              </li>
+            </ul>
+            <hr>
+            <p class="total">Total: <span id="total">₹0</span></p>
+          </div>
+        </div>
+        <div class="lower-right">
+          <div class="form">
+            <h2>Book Now</h2>
+            <form class="form-content" onsubmit="sendEmail(event)">
+              <label for="name">Full Name</label>
+              <input class="name1" type="text" name="name" placeholder="Your Name" required>
+
+
+              <div style="display: flex;justify-content: space-between; ">
+                <div class="if">
+                  <label for="Email">Email Id</label>
+                  <input class="email" type="email" placeholder="Email Id" required>
+                </div>
+
+                <div class="if">
+                  <label for="number">Phone Number</label>
+                  <input class="number" type="number" placeholder="Contact Number" required>
+                </div>
+              </div>
+
+
+              <button class="booknow">Book Now</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="features-card">
+      <div class="card">
+        <ion-icon name="diamond-outline"></ion-icon>
+        <h2>Premium Service</h2>
+        <small>Elevate your wardrobe with our meticulous dry cleaning, ensuring garments look and feel as good as new.
+        </small>
+      </div>
+      <div class="card">
+        <ion-icon name="help-circle-outline"></ion-icon>
+        <h2>Quick Support</h2>
+        <small>We're committed to providing prompt solutions to ensure your experience is smooth and worry free.</small>
+      </div>
+      <div class="card">
+        <ion-icon name="car-outline"></ion-icon>
+        <h2>Hassle Free Delivery</h2>
+        <small>Enjoy seamless service with our convenient pickup and delivery options, tailored to your
+          schedule.</small>
+      </div>
+      <div class="card">
+        <ion-icon name="pricetag-outline"></ion-icon>
+        <h2>Affordable Prices</h2>
+        <small>Experience exceptional care without breaking the bank - our affordable prices makes laundry day
+          stress-free</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="subscribe">
+    <div class="subscribe-content">
+
+      <div class="subscribe-header">
+        <h1>Subscribe to our newsletter.</h1>
+      </div>
+
+      <div class="subscribe-form">
+
+        <div>
+          <input class="input" type="text" placeholder="Your Name" required>
+          <input class="input" type="email" placeholder="Email" required>
+        </div>
+
+        <button class="subscribe-btn">Subscribe</button>
+
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer">
+      <div class="aboutus">
+        <img class="logo" src="logo.png" alt="">
+        <h3>About Us</h3>
+        <small>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, veritatis.</small>
+      </div>
+
+      <div class="links">
+        <h2>Important Links</h2>
+        <a href="">About Us<a href="">Contact Us</a><a href="">Privacy Policy</a><a href="">Terms of Use</a><a
+            href="">Refund Policy</a>
+      </div>
+
+      <div class="contact">
+        <h2>Contact</h2>
+        <p>FineCleaning123@gmail.com</p>
+        <p>+91 9123456780</p>
+      </div>
+
+      <div class="follow">
+        <h2>Follow Us</h2>
+        <ion-icon name="logo-youtube"></ion-icon>
+        <ion-icon name="logo-facebook"></ion-icon>
+        <ion-icon name="logo-instagram"></ion-icon>
+        <ion-icon name="logo-twitter"></ion-icon>
+
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="script.js"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "JvqMuFWG4Ox1pU58A",
+      });
+    })();
+  </script>
+
+
+</body>
+
+
+</html>
